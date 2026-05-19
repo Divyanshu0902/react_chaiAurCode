@@ -13,12 +13,24 @@ const reactElement = {
 }
 
 function customRender(reactElement, mainContainer){
+/*
     const domElement = document.createElement(reactElement.type);
 
     domElement.innerHTML = reactElement.children;
     domElement.href = reactElement.props.href;
     domElement.target = reactElement.props.target;
 
+    mainContainer.appendChild(domElement);
+*/
+
+    const domElement = document.createElement(reactElement.type);
+    domElement.innerHTML = reactElement.children;
+    
+    for (const key in reactElement.props) {
+        if (key === "children") continue;
+        
+        domElement.setAttribute(key, reactElement.props[key]);
+    }
     mainContainer.appendChild(domElement);
 }
 
