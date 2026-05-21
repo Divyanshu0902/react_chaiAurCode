@@ -11,7 +11,11 @@ function App() {
         Divyanshu Kumar
       </h2>
 
-      < Card />
+      < Card 
+        name = "Divyanshu"
+        desc = "I am a frontend developer specializing in React JS. I am also interested in learning about AI and ML."
+        btn = "Know More"
+      />
       
     </>
   )
