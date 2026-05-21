@@ -16,6 +16,12 @@ function App() {
         desc = "I am a frontend developer specializing in React JS. I am also interested in learning about AI and ML."
         btn = "Know More"
       />
+
+      < Card 
+        name = "Ronak"
+        desc = "I am an ML Engineer specializing in SciKitLearn, RAG, Vector Databases and CNN, RNNs."
+        btn = "My💓Titli"
+      />
       
     </>
   )
