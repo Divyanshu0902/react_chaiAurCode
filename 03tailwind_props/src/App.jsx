@@ -22,7 +22,7 @@ function App() {
         desc = "I am an ML Engineer specializing in SciKitLearn, RAG, Vector Databases and CNN, RNNs."
         btn = "My💓Titli"
       />
-      
+
     </>
   )
 }
