@@ -1,0 +1,76 @@
+body{
+  width:100vw;
+  height: 100vh;
+  background-color: brown;
+  transition: background-color 0.5s ease;
+}
+
+.navbar{
+  width: 50vw;
+  height: 4vh;
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: relative;
+  top : 10vw;
+  left: 20vw;
+
+   display: flex;
+
+    justify-content: center;   /* horizontal */
+
+    align-items: center;       /* vertical */
+    padding: 15px 40px;
+
+    gap: 20px;
+
+    height: 60px;
+
+    background-color: black;
+}
+
+.button{
+    width: 70px;
+    height: 30px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.Violet{
+  background-color: violet;
+}
+
+.Indigo{
+  background-color: indigo;
+}
+
+.Blue{
+    background-color: blue;
+}
+
+.Green{
+    background-color: green;
+}
+
+.Yellow{
+  background-color: yellow;
+}
+
+.Orange{
+  background-color: orange;
+}
+
+.Red{
+    background-color: red;
+}
