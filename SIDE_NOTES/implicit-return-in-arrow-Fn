@@ -1,0 +1,301 @@
+# Arrow Functions in JavaScript
+
+## Basic Syntax
+
+```js
+const func = (params) => {
+   // code
+}
+```
+
+Example:
+
+```js
+const greet = () => {
+   console.log("Hello");
+}
+```
+
+---
+
+# Two Types of Arrow Functions
+
+1. Implicit Return (Automatic Return)
+2. Explicit Return (Manual Return)
+
+---
+
+# 1. Implicit Return
+
+When `{}` are NOT used, JavaScript automatically returns the expression.
+
+## Syntax
+
+```js
+param => expression
+```
+
+Example:
+
+```js
+const square = x => x * x;
+```
+
+Equivalent to:
+
+```js
+const square = x => {
+   return x * x;
+}
+```
+
+---
+
+# 2. Explicit Return
+
+When `{}` are used, you MUST write `return`.
+
+## Syntax
+
+```js
+(param) => {
+   return something;
+}
+```
+
+Example:
+
+```js
+const square = (x) => {
+   return x * x;
+}
+```
+
+---
+
+# Important Rule
+
+## Without `{}`
+
+Automatic return happens.
+
+```js
+const add = (a,b) => a + b;
+```
+
+---
+
+## With `{}`
+
+You must use `return`.
+
+```js
+const add = (a,b) => {
+   return a + b;
+}
+```
+
+---
+
+# Common Beginner Mistake
+
+```js
+const add = (a,b) => {
+   a + b;
+}
+```
+
+Output:
+
+```js
+undefined
+```
+
+Why?
+
+Because `{}` creates a full function body and automatic return stops working.
+
+---
+
+# Internal Understanding
+
+```js
+const add = (a,b) => {
+   a + b;
+}
+```
+
+acts like:
+
+```js
+function add(a,b){
+   a + b;
+}
+```
+
+No `return` statement → returns `undefined`.
+
+---
+
+# Implicit vs Explicit Return
+
+## Implicit Return
+
+```js
+x => x * 2
+```
+
+Think:
+
+> Return this immediately.
+
+---
+
+## Explicit Return
+
+```js
+x => {
+   return x * 2;
+}
+```
+
+Think:
+
+> This is a full function body.
+
+---
+
+# Why Use Explicit Return?
+
+Used when:
+- multiple lines
+- conditions
+- loops
+- complex logic
+
+Example:
+
+```js
+const check = (num) => {
+   if(num % 2 == 0){
+      return "Even";
+   }
+
+   return "Odd";
+}
+```
+
+---
+
+# Why Use Implicit Return?
+
+Cleaner for short expressions.
+
+Example:
+
+```js
+const isEven = n => n % 2 == 0;
+```
+
+---
+
+# Returning Objects
+
+## Wrong
+
+```js
+const user = () => {name: "Divyanshu"}
+```
+
+Output:
+
+```js
+undefined
+```
+
+Because `{}` is treated as function body.
+
+---
+
+## Correct
+
+Wrap object inside `()`.
+
+```js
+const user = () => ({name: "Divyanshu"});
+```
+
+Output:
+
+```js
+{name: "Divyanshu"}
+```
+
+---
+
+# Examples with map()
+
+## Implicit Return
+
+```js
+arr.map(x => x * 2)
+```
+
+---
+
+## Explicit Return
+
+```js
+arr.map(x => {
+   return x * 2;
+})
+```
+
+Both are same.
+
+---
+
+# Quick Rule Table
+
+| Format | Return Needed? |
+|---|---|
+| `x => x * 2` | No |
+| `x => { return x * 2 }` | Yes |
+
+---
+
+# Key Takeaway
+
+## Without `{}`
+
+JavaScript automatically returns the expression.
+
+```js
+x => x + 1
+```
+
+---
+
+## With `{}`
+
+You must explicitly write `return`.
+
+```js
+x => {
+   return x + 1;
+}
+```
+
+Otherwise:
+
+```js
+x => {
+   x + 1;
+}
+```
+
+returns:
+
+```js
+undefined
+```
