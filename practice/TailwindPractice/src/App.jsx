@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import './App.css'
 
-export default function CenteredCard() {
+export default function App() {
   return (
 
   //problem 1: Center a div
@@ -70,7 +70,7 @@ export default function CenteredCard() {
     
     <>
         {/* 1. Main Container: Fixed max-width, centered, vertically stacked */}
-    <div className="flex m-10 p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+    <div className=" m-10 p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
       
       {/* The heading sits naturally on top */}
       <h3 className="text-xl font-bold text-gray-900 mb-1">
